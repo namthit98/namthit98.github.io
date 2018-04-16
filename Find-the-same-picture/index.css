@@ -96,6 +96,27 @@ body{
   top: -12%;
 }
 
+#rules-of-game{
+  position: absolute;
+  width: 30%;
+  height: auto;
+  background: white;
+  z-index: 101;
+  border-radius: 1%;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5),
+              -2px -2px 30px rgba(0, 0, 0, 0.5);
+  display: none;
+  padding: 20px 30px;
+  line-height: 1.5;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+#rules-of-game h1{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .head{
   position: absolute;
   top: -5%;

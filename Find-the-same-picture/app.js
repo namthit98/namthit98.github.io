@@ -89,7 +89,9 @@ const UIController = (function(){
     avatar: ".avatar",
     rank: "#rank",
     ranks: "#ranks",
-    oneUser : ".one-user"
+    oneUser : ".one-user",
+    rulesOfGame: "#rules-of-game",
+    rulesBtn: "#rules"
 
   }
 
@@ -224,6 +226,7 @@ const UIController = (function(){
       document.querySelector(DOMString.bg).style.display = "none";
       document.querySelector(DOMString.signupDiv).style.display = "none";
       document.querySelector(DOMString.ranks).style.display = "none";
+      document.querySelector(DOMString.rulesOfGame).style.display = "none";
     },
 
     showSignup: function(){
@@ -275,8 +278,11 @@ const UIController = (function(){
       document.querySelectorAll(DOMString.oneUser).forEach(function(el){
         el.remove();
       });
-
-      for(let i = 0; i < 10; i++){
+      let length = listUser.length;
+      for(let i = 0; i < length; i++){
+        if(i >= 10){
+          break;
+        }
         let div = document.createElement("div");
         div.className = "one-user";
 
@@ -288,6 +294,11 @@ const UIController = (function(){
         document.querySelector("#ranks").insertAdjacentElement("beforeend", div);
       };
 
+    },
+
+    showRulesOfGame: function(){
+      document.querySelector(DOMString.bg).style.display = "block";
+      document.querySelector(DOMString.rulesOfGame).style.display = "block";
     },
 
     getDOMString: function(){
@@ -512,6 +523,11 @@ const AppController = (function(uiCtrl, gameCtrl, localStorageCtrl){
     document.querySelector(uiCtrl.getDOMString().submit).addEventListener("click", submit);
     document.querySelector(uiCtrl.getDOMString().submit2).addEventListener("click", submit2);
     document.querySelector(uiCtrl.getDOMString().rank).addEventListener("click", showRank);
+    document.querySelector(uiCtrl.getDOMString().rulesBtn).addEventListener("click", showRulesOfGame);
+  };
+
+  const showRulesOfGame = function(){
+    uiCtrl.showRulesOfGame()
   };
 
   const showRank = function(){
@@ -535,7 +551,7 @@ const AppController = (function(uiCtrl, gameCtrl, localStorageCtrl){
     //Get info from ui
     let user = uiCtrl.getInfoFromLogin();
     if(user.username === '' || user.password === ''){
-      alert("thiếu thông tin");
+      alert("Complete form, please !");
       return false;
     }
 
@@ -544,7 +560,7 @@ const AppController = (function(uiCtrl, gameCtrl, localStorageCtrl){
 
     //Show notification
     if(ret === undefined) {
-      alert("Tài khoản k tồn tại hoặc sai mật khẩu");
+      alert("Account does not exist or wrong password.");
     } else {
       gameCtrl.setCurrentUser(ret);
       uiCtrl.showInfoUser(gameCtrl.getCurrentUser());
@@ -572,7 +588,11 @@ const AppController = (function(uiCtrl, gameCtrl, localStorageCtrl){
     //save to game
     gameCtrl.saveCurrentUser(user);
 
-    //save to local
+    //Show info
+    uiCtrl.showInfoUser(gameCtrl.getCurrentUser());
+    uiCtrl.setAvatar(gameCtrl.getCurrentUser());
+
+    //save to local 
     let currentUser = gameCtrl.getCurrentUser();
     localStorageCtrl.saveUserToLocal(currentUser);
   };
