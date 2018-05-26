@@ -1,0 +1,205 @@
+.mt-1 {
+  margin-top: .5rem; }
+
+.mt-2 {
+  margin-top: 1rem; }
+
+.mt-3 {
+  margin-top: 1.5rem; }
+
+.mt-4 {
+  margin-top: 2rem; }
+
+.mt-5 {
+  margin-top: 2.5rem; }
+
+.mb-1 {
+  margin-bottom: .5rem; }
+
+.mb-2 {
+  margin-bottom: 1rem; }
+
+.mb-3 {
+  margin-bottom: 1.5rem; }
+
+.mb-4 {
+  margin-bottom: 2rem; }
+
+.mb-5 {
+  margin-bottom: 2.5rem; }
+
+.ml-1 {
+  margin-left: .5rem; }
+
+.ml-2 {
+  margin-left: 1rem; }
+
+.ml-3 {
+  margin-left: 1.5rem; }
+
+.ml-4 {
+  margin-left: 2rem; }
+
+.ml-5 {
+  margin-left: 2.5rem; }
+
+.mr-1 {
+  margin-right: .5rem; }
+
+.mr-2 {
+  margin-right: 1rem; }
+
+.mr-3 {
+  margin-right: 1.5rem; }
+
+.mr-4 {
+  margin-right: 2rem; }
+
+.mr-5 {
+  margin-right: 2.5rem; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 1435px) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 1185px) {
+    html {
+      font-size: 40%; } }
+  @media only screen and (max-width: 992px) {
+    html {
+      font-size: 45%; } }
+  @media only screen and (max-width: 767px) {
+    html {
+      font-size: 62.5%; } }
+
+body {
+  background-color: #F4F4F4;
+  font-family: 'Lato', sans-serif;
+  overflow: hidden; }
+
+.menu-icon div {
+  width: 3.5rem;
+  height: .5rem;
+  background-color: #A4A4A4;
+  margin: .6rem 0;
+  border-radius: .3rem; }
+
+.slider {
+  background-color: pink;
+  height: 70vh;
+  position: relative;
+  overflow: hidden; }
+  .slider__images {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .slider__images img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+  .slider__controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    font-size: 1.7rem; }
+    .slider__controls div {
+      width: 4rem;
+      height: 7rem;
+      background-color: rgba(164, 164, 164, 0.4);
+      transition: background-color .4s;
+      cursor: pointer; }
+      .slider__controls div:hover {
+        background-color: rgba(164, 164, 164, 0.8); }
+      .slider__controls div:hover i {
+        color: black; }
+      .slider__controls div i {
+        line-height: 7rem;
+        font-size: 2rem;
+        color: #373737; }
+
+.header {
+  background-color: #494949; }
+  .header__menu-icon {
+    border-right: 1px solid #373737;
+    cursor: pointer; }
+    .header__menu-icon:hover span {
+      color: #A4A4A4; }
+    .header__menu-icon span {
+      text-transform: uppercase;
+      color: white;
+      transition: color .4s; }
+  .header__middle {
+    height: auto; }
+  .header__link {
+    font-size: 1.7rem;
+    color: #F4F4F4;
+    margin-right: 2rem;
+    padding: 1.5rem 0;
+    position: relative; }
+    .header__link:hover > a, .header__link:hover i {
+      color: #A4A4A4;
+      transition: color .4s; }
+    .header__link:hover ul {
+      opacity: 1;
+      visibility: visible;
+      transform: scaleY(1); }
+    .header__link:hover a {
+      text-decoration: none; }
+    .header__link a {
+      color: #F4F4F4;
+      margin-right: .8rem; }
+    .header__link > ul {
+      background-color: #494949;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 20rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .4s;
+      transform: scaleY(0);
+      transform-origin: 0% 0%;
+      z-index: 100; }
+      .header__link > ul li {
+        padding: .5rem 1rem;
+        transition: background-color .4s; }
+        .header__link > ul li:hover {
+          background-color: #A4A4A4;
+          cursor: pointer; }
+        .header__link > ul li:hover a {
+          color: #494949; }
+      .header__link > ul li:not(:last-child) {
+        border-bottom: 1px solid #373737; }
+  .header__logo {
+    width: 4.5rem; }
+  .header__name-hotel {
+    font-size: 2rem;
+    color: #F4F4F4;
+    transition: color .4s; }
+    .header__name-hotel:hover {
+      text-decoration: none;
+      color: #A4A4A4; }
+  .header__phone {
+    font-size: 1.6rem;
+    color: #F4F4F4; }
+    .header__phone i {
+      margin-right: 1rem; }
+    @media only screen and (max-width: 768px) {
+      .header__phone {
+        padding-right: 5rem; } }
+
+.languages {
+  font-size: 1.6rem;
+  height: 100%;
+  color: #F4F4F4; }
