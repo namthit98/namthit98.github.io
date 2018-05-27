@@ -130,6 +130,33 @@ document.addEventListener("DOMContentLoaded", function() {
     })
   })
 
-  
 
+
+  ///////////////////////////////////////////
+  /////////////Xử lý side-menu//////////////////
+  ///////////////////////////////////////////
+  document.querySelector(".slider").style.top = document.querySelector("header.header").clientHeight - 1 + "px";
+
+  document.querySelector(".header__menu-icon").addEventListener("click", function() {
+
+    if(document.querySelector(".side-menu").style.width === '0px') {
+      let top = document.querySelector("header.header").clientHeight;
+      document.querySelector(".side-menu").style.top = top + "px";
+      document.querySelector(".side-menu").style.width = "30rem";
+      document.querySelector(".side-menu").style.opacity = "1";
+      document.querySelector(".side-menu").style.visibility = "visible";
+      this.style.backgroundColor = "rgba(0, 0, 0, .3)";
+    } else {
+      document.querySelector(".side-menu").style.width = '0px';
+      document.querySelector(".side-menu").style.opacity = "0";
+      document.querySelector(".side-menu").style.visibility = "hidden";
+      this.style.backgroundColor = "transparent";
+    }
+  })
+
+  window.addEventListener("resize", function() {
+    let top = document.querySelector("header.header").clientHeight;
+    document.querySelector(".side-menu").style.top = top + "px";
+    document.querySelector(".slider").style.top = top + "px";
+  })
 })
