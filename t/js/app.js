@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function() {
   ///////////////////////////////////////////
   /////////////Xử lý side-menu//////////////////
   ///////////////////////////////////////////
-  document.querySelector(".slider").style.top = document.querySelector("header.header").clientHeight - 1 + "px";
+  document.querySelector(".slider").style.marginTop = document.querySelector("header.header").clientHeight - 1 + "px";
 
   document.querySelector(".header__menu-icon").addEventListener("click", function() {
 
@@ -157,6 +157,7 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener("resize", function() {
     let top = document.querySelector("header.header").clientHeight;
     document.querySelector(".side-menu").style.top = top + "px";
-    document.querySelector(".slider").style.top = top + "px";
+    document.querySelector(".slider").style.marginTop = top + "px";
+    
   })
 })
