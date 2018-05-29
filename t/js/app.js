@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
   document.querySelector(".slider__content--control").addEventListener("click", function() {
     if(this.children[0].style.transform === '') {
       this.children[0].style.transform = "rotate(45deg)";
-      this.parentElement.style.backgroundColor = "rgba(0, 0 ,0 , .6)";
+      this.parentElement.style.backgroundColor = "rgba(0, 0 ,0 , .8)";
       this.nextElementSibling.style.transform = "translateX(0%)";
     } else {
       this.children[0].style.transform = '';
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener("resize", function() {
     let top = document.querySelector("header.header").clientHeight;
     document.querySelector(".side-menu").style.top = top + "px";
-    document.querySelector(".slider").style.marginTop = top + "px";
+    document.querySelector(".slider").style.marginTop = top - 2 + "px";
     
   })
 })
