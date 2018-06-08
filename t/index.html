@@ -39,7 +39,7 @@
           </div>
           <div class="col-9 col-sm-6 d-flex align-items-center">
             <img src="./images/logo.png" alt="Logo" class="header__logo" />
-            <a href="#" class="header__name-hotel">Hà Minh Hotel</a>
+            <a href="./index.html" class="header__name-hotel">Hà Minh Hotel</a>
           </div>
           <div class="d-none d-sm-flex col-4 align-items-center justify-content-end justify-content-lg-start header__phone">
             <i class="fas fa-phone"></i> +841684022929
@@ -51,19 +51,13 @@
         <div class="header__link">
           <a href="?#">Tour</a><i class="fas fa-chevron-down"></i>
           <ul>
-            <li><a href="?#">test 01</a></li>
-            <li><a href="?#">test 02</a></li>
-            <li><a href="?#">test 03</a></li>
+            <li><a href="./tour.html">Nha Trang</a></li>
+            <li><a href="?#">Hạ Long</a></li>
           </ul>
         </div>
 
         <div class="header__link">
-          <a href="?#">Reservation</a><i class="fas fa-chevron-down"></i>
-          <ul>
-            <li><a href="?#">test 01</a></li>
-            <li><a href="?#">test 02</a></li>
-            <li><a href="?#">test 03</a></li>
-          </ul>
+          <a href="?#" class="btn btn--yellow">Reservation</a></i>
         </div>
       </div>
 
@@ -86,7 +80,7 @@
       <img src="./images/3.jpg" alt="slider-image-3"/>
     </div>
 
-    <div class="slider__controls d-none d-sm-flex align-items-center justify-content-between">
+    <div class="slider__controls d-none d-md-flex align-items-center justify-content-between">
       <div class="slider__controls--left">
         <i class="fas fa-chevron-left d-flex justify-content-center"></i>
       </div>
@@ -96,7 +90,7 @@
       </div>
     </div>
 
-    <div class="slider__content d-none d-sm-flex align-items-center justify-content-around">
+    <div class="slider__content d-none d-md-flex align-items-center justify-content-around">
       <div class="slider__content--control d-flex justify-content-start align-items-center">
         <i class="fas fa-plus d-flex align-items-center justify-content-center"></i>  
       </div>
@@ -186,9 +180,9 @@
 
   <!-- .Start Top -->
   <section class="top mb-5">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6 mb-2">
+        <div class="col-md-4 mb-2">
           <div class="card">
             <div class="card__img">
               <img src="./images/card-1.jpg" alt="top-images">
@@ -201,7 +195,20 @@
           </div>
         </div>
 
-        <div class="col-md-6 mb-2">
+        <div class="col-md-4 mb-2">
+          <div class="card">
+            <div class="card__img">
+              <img src="./images/card-2.jpg" alt="top-images">
+            </div>
+
+            <div class="card__content">
+              <h3 class="card__heading">Now Earn Points on Experiences</h3>
+              <a href="#" class="card__link">EXPLORE ACTIVITIES <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-2">
           <div class="card">
             <div class="card__img">
               <img src="./images/card-2.jpg" alt="top-images">
@@ -235,7 +242,9 @@
   </section>
   <!-- End map -->
 
-  <section class="footer mt-5">
+
+  <!-- Start footer -->
+  <section class="footer">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -283,7 +292,38 @@
       <p>Copyright &copy; 2018 Hà Minh Hotel. All rights reserved</p>
     </div>
   </section>
+  <!-- End footer -->
 
   <script src="./js/app.js"></script>
+  <script>
+  ///////////////////////////////////////////
+  /////////////Xử lý side-menu//////////////////
+  ///////////////////////////////////////////
+  document.querySelector(".slider").style.marginTop = document.querySelector("header.header").clientHeight - 1 + "px";
+
+  document.querySelector(".header__menu-icon").addEventListener("click", function() {
+
+    if(document.querySelector(".side-menu").style.width === '0px') {
+      let top = document.querySelector("header.header").clientHeight;
+      document.querySelector(".side-menu").style.top = top + "px";
+      document.querySelector(".side-menu").style.width = "30rem";
+      document.querySelector(".side-menu").style.opacity = "1";
+      document.querySelector(".side-menu").style.visibility = "visible";
+      this.style.backgroundColor = "rgba(0, 0, 0, .3)";
+    } else {
+      document.querySelector(".side-menu").style.width = '0px';
+      document.querySelector(".side-menu").style.opacity = "0";
+      document.querySelector(".side-menu").style.visibility = "hidden";
+      this.style.backgroundColor = "transparent";
+    }
+  })
+
+  window.addEventListener("resize", function() {
+    let top = document.querySelector("header.header").clientHeight;
+    document.querySelector(".side-menu").style.top = top + "px";
+    document.querySelector(".slider").style.marginTop = top - 2 + "px";
+    
+  })
+  </script>
 </body>
 </html>
