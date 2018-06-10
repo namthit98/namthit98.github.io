@@ -135,29 +135,17 @@ document.addEventListener("DOMContentLoaded", function() {
   ///////////////////////////////////////////
   /////////////Xử lý side-menu//////////////////
   ///////////////////////////////////////////
-  // document.querySelector(".slider").style.marginTop = document.querySelector("header.header").clientHeight - 1 + "px";
+  document.querySelectorAll(".side-menu__submenu").forEach(function(el) {
+    el.parentElement.addEventListener("click", function() {
+      el.classList.toggle("side-menu__submenu--active");
 
-  // document.querySelector(".header__menu-icon").addEventListener("click", function() {
+      let icon = el.previousElementSibling.firstElementChild;
 
-  //   if(document.querySelector(".side-menu").style.width === '0px') {
-  //     let top = document.querySelector("header.header").clientHeight;
-  //     document.querySelector(".side-menu").style.top = top + "px";
-  //     document.querySelector(".side-menu").style.width = "30rem";
-  //     document.querySelector(".side-menu").style.opacity = "1";
-  //     document.querySelector(".side-menu").style.visibility = "visible";
-  //     this.style.backgroundColor = "rgba(0, 0, 0, .3)";
-  //   } else {
-  //     document.querySelector(".side-menu").style.width = '0px';
-  //     document.querySelector(".side-menu").style.opacity = "0";
-  //     document.querySelector(".side-menu").style.visibility = "hidden";
-  //     this.style.backgroundColor = "transparent";
-  //   }
-  // })
-
-  // window.addEventListener("resize", function() {
-  //   let top = document.querySelector("header.header").clientHeight;
-  //   document.querySelector(".side-menu").style.top = top + "px";
-  //   document.querySelector(".slider").style.marginTop = top - 2 + "px";
-    
-  // })
+      if(icon.classList.contains("fa-plus-square")) {
+        icon.className = "fas fa-minus-square";
+      } else {
+        icon.className = "fas fa-plus-square";
+      }
+    })
+  })
 })

@@ -7,7 +7,7 @@
   <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" /> -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" /> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"> 
-  <link rel="stylesheet" href="./style/style.min.css">
+  <link rel="stylesheet" href="./style/style.min.css" />
   <title>Hà Minh Hotel</title>
 </head>
 <body>
@@ -15,11 +15,21 @@
   <!-- Start side-menu -->
   <aside class="side-menu" style="width: 0px;">
     <ul>
-      <li><a href="#">MARRIOTT.COM HOME</a></li>
-      <li><a href="#">FIND & RESERVE</a></li>
-      <li><a href="#">COLLAPSE RESERVATIONS</a></li>
-      <li><a href="#">DEALS & PACKAGES</a></li>
-      <li><a href="#">SHOP MARRIOTT</a></li>
+      <li><a href="#">Reservation</a></li>
+      <li>
+        <a href="#"><i class="fas fa-minus-square"></i>Tours</a>
+        <ul class="side-menu__submenu side-menu__submenu--active">
+          <li><a href="./tour.html">Nha Trang</a></li>
+          <li><a href="#">Phú Quốc</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-minus-square"></i>About us</a>
+        <ul class="side-menu__submenu side-menu__submenu--active">
+          <li><a href="#">Location</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </li>
     </ul>
   </aside>
   <!-- End side-menu -->
@@ -52,7 +62,7 @@
           <a href="?#">Tour</a><i class="fas fa-chevron-down"></i>
           <ul>
             <li><a href="./tour.html">Nha Trang</a></li>
-            <li><a href="?#">Hạ Long</a></li>
+            <li><a href="?#">Phú Quốc</a></li>
           </ul>
         </div>
 
