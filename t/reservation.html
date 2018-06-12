@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -10,7 +9,7 @@
   <link rel="stylesheet" href="./style/style.min.css">
   <title>Hà Minh Hotel</title>
 </head>
-<body>
+<body id="reservation">
 
   <!-- Start side-menu -->
   <aside class="side-menu" style="width: 0px;">
@@ -81,176 +80,106 @@
   </header>
   <!-- End header -->
 
-
-  <!-- Start slider -->
-  <section class="slider">
-    <div class="slider__images">
-      <img src="./images/1.jpg" alt="slider-image-1" class="active"/>
-      <img src="./images/2.jpg" alt="slider-image-2" />
-      <img src="./images/3.jpg" alt="slider-image-3"/>
+  <!-- Start Banner -->
+  <section class="banner">
+    <div class="banner__content">
+      <h2 class="banner__heading">Rooms</h2>
     </div>
-
-    <div class="slider__controls d-none d-md-flex align-items-center justify-content-between">
-      <div class="slider__controls--left">
-        <i class="fas fa-chevron-left d-flex justify-content-center"></i>
-      </div>
-
-      <div class="slider__controls--right">
-        <i class="fas fa-chevron-right d-flex justify-content-center"></i>
-      </div>
-    </div>
-
-    <div class="slider__content d-none d-md-flex align-items-center justify-content-around">
-      <div class="slider__content--control d-flex justify-content-start align-items-center">
-        <i class="fas fa-plus d-flex align-items-center justify-content-center"></i>  
-      </div>
-
-      <div class="slider__content--text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae nihil obcaecati. Aut asperiores maiores earum doloribus at atque. Dolor suscipit necessitatibus ipsa, corporis optio numquam non fuga alias provident?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae nihil obcaecati. Aut asperiores maiores earum doloribus at atque. 
-      </div>
-    </div>
+    <div class="banner__icon"></div>
   </section>
-  <!-- End slider -->
+  <!-- End Banner -->
 
 
-  <!-- Start info -->
-  <section class="info">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 offset-0 offset-md-3 col-md-6">
-            <h2 class="info__heading mt-5">Our Lowest Prices. Instant Benefits. Only on Marriott.com</h2>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="info__services col-md-3">
-          <i class="fas fa-star"></i>
-          <h3>Best Rate Guarantee</h3>
-        </div>
-
-        <div class="info__services col-md-3">
-          <i class="fas fa-wifi"></i>
-          <h3>Free Wi-Fi</h3>
-        </div>
-
-        <div class="info__services col-md-3">
-          <i class="fas fa-mobile"></i>
-          <h3>Mobile Check-in</h3>
-        </div>
-
-        <div class="info__services col-md-3">
-          <i class="fas fa-bed"></i>
-          <h3>Enjoy Free Nights</h3>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="offset-3 col-6 d-flex justify-content-center align-items-center" style="padding:1rem 0;transform-style: preserve-3d;">
-          <button class="btn btn--blue mt-2 mb-2">Book Now</button>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End info -->
-
-
-  <!-- Start intro -->
-  <section class="intro">
-    <div class="container-fluid d-flex flex-column justify-content-center">
-      <div class="row justify-content-center">
-        <div class="col-6 d-flex flex-column align-items-center">
-          <img src="./images/logo.png" alt="" class="intro__logo" />
-          <h1 class="intro__name-hotel">Hà Minh Hotel</h1>
-        </div>
-      </div>
-
-      <div class="row justify-content-center mt-5">
-        <div class="col-10">
-          <div class="intro__content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores harum obcaecati fugit hic quasi modi dolor corrupti corporis accusantium error, eum similique voluptatum itaque impedit non, quaerat praesentium dolorem voluptatem?
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End intro -->
-
-
-  <!-- Heading -->
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12 d-flex justify-content-center">
-        <h2 class="heading">This Week's Top Offers</h2>
-      </div>
-    </div>
-  </div>
-  <!-- Heading -->
-
-
-  <!-- .Start Top -->
-  <section class="top mb-5">
+  <!-- Start reservation -->
+  <section class="reservation">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-4 mb-2">
-          <div class="card">
-            <div class="card__img">
-              <img src="./images/card-1.jpg" alt="top-images">
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="room">
+                <div class="room__image">
+                  <img src="./images/room-1.jpg" alt="Room 1" />
+                </div>
+
+                <div class="room__info">
+                  <h3 class="room__title"> Phòng Deluxe</h3>
+                  <div class="room__text">
+                    <strong>Price:</strong><span> 400,000 vnđ/nigh</span><br />
+                    <strong>Beds:</strong> 1 king size bed or 2 single beds<br />
+                    <strong>Max:</strong> 2 Adults + 01 Child under 6<br />
+                    <strong>Size:</strong> 45m2<br />
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="card__content">
-              <h3 class="card__heading">Marriott now offering homes in London</h3>
-              <a href="#" class="card__link">EXPLORE ACTIVITIES <i class="fas fa-chevron-right"></i></a>
+            <div class="col-md-6">
+              <div class="room">
+                <div class="room__image">
+                  <img src="./images/room-2.jpg" alt="Room 2" />
+                </div>
+
+                <div class="room__info">
+                  <h3 class="room__title">Superior Room</h3>
+                  <div class="room__text">
+                    <strong>Price:</strong><span> 300,000 vnđ/nigh</span><br />
+                    <strong>Beds:</strong> 1 double bed or 2 single beds<br />
+                    <strong>Max:</strong> 2 Adults + 01 Child under 6<br />
+                    <strong>Size:</strong> 20m2<br />
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <div class="col-md-6">
+              <div class="room">
+                <div class="room__image">
+                  <img src="./images/room-3.jpg" alt="Room 3" />
+                </div>
+
+                <div class="room__info">
+                  <h3 class="room__title">Bungalow Luxury </h3>
+                  <div class="room__text">
+                    <strong>Price:</strong><span> 800,000 vnđ/nigh</span><br />
+                    <strong>Beds:</strong> Double kingsize bed<br />
+                    <strong>Max:</strong> 02 Adults + 01 Child under 6<br />
+                    <strong>Size:</strong> 100m2<br />
+                  </div>
+                </div>
+              </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="room">
+                  <div class="room__image">
+                    <img src="./images/room-4.jpg" alt="Room 4" />
+                  </div>
+  
+                  <div class="room__info">
+                    <h3 class="room__title">Suite Room</h3>
+                    <div class="room__text">
+                      <strong>Price:</strong><span> 400,000 vnđ/nigh</span><br />
+                      <strong>Beds:</strong> 01 Kingsize bed<br />
+                      <strong>Max:</strong> 2 Adults + 01 Child under 6<br />
+                      <strong>Size:</strong> 70m2<br />
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
         </div>
 
-        <div class="col-md-4 mb-2">
-          <div class="card">
-            <div class="card__img">
-              <img src="./images/card-2.jpg" alt="top-images">
-            </div>
-
-            <div class="card__content">
-              <h3 class="card__heading">Now Earn Points on Experiences</h3>
-              <a href="#" class="card__link">EXPLORE ACTIVITIES <i class="fas fa-chevron-right"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-2">
-          <div class="card">
-            <div class="card__img">
-              <img src="./images/card-2.jpg" alt="top-images">
-            </div>
-
-            <div class="card__content">
-              <h3 class="card__heading">Now Earn Points on Experiences</h3>
-              <a href="#" class="card__link">EXPLORE ACTIVITIES <i class="fas fa-chevron-right"></i></a>
-            </div>
+        <div class="col-md-4">
+          <div class="book">
+              <p>Để biết thêm thông tin, xin vui lòng liên hệ (84-24) 3845 2270 số máy lẻ 6100 hoặc 6102</p>
+              <p>Hotline: (84) 8 8851 0085</p>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- End Top -->
-
-  <!-- Heading -->
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12 d-flex justify-content-center">
-        <h2 class="heading">Location</h2>
-      </div>
-    </div>
-  </div>
-  <!-- Heading -->
-
-
-  <!-- Start map -->
-  <section class="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4210.472169148297!2d105.78115776056183!3d21.027980582036438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b32bdf2c3b%3A0x6fdddfac0aef54d0!2sT%C3%B2a+nh%C3%A0+Detech+Tower!5e0!3m2!1svi!2s!4v1527396541733" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-  </section>
-  <!-- End map -->
+  <!-- End reservation -->
 
 
   <!-- Start footer -->
@@ -297,21 +226,18 @@
         </div>
       </div>
     </div>
-
+  
     <div class="footer__copyright mt-5">
       <p>Copyright &copy; 2018 Hà Minh Hotel. All rights reserved</p>
     </div>
   </section>
   <!-- End footer -->
 
-  <script src="./js/app.js"></script>
   <script src="./js/shared.js"></script>
   <script>
   ///////////////////////////////////////////
   /////////////Xử lý side-menu//////////////////
   ///////////////////////////////////////////
-  document.querySelector(".slider").style.marginTop = document.querySelector("header.header").clientHeight - 1 + "px";
-
   document.querySelector(".header__menu-icon").addEventListener("click", function() {
 
     if(document.querySelector(".side-menu").style.width === '0px') {
@@ -332,8 +258,12 @@
   window.addEventListener("resize", function() {
     let top = document.querySelector("header.header").clientHeight;
     document.querySelector(".side-menu").style.top = top + "px";
-    document.querySelector(".slider").style.marginTop = top - 2 + "px";
+    // document.querySelector(".banner").style.marginTop = top - 2 + "px";
+    
   })
   </script>
 </body>
 </html>
+
+
+  

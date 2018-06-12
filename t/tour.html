@@ -6,14 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" /> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"> 
-  <link rel="stylesheet" href="./style/style.min.css" />
+  <link rel="stylesheet" href="./style/style.min.css">
   <title>Tour</title>
 </head>
 <body id="tour">
     <!-- Start side-menu -->
     <aside class="side-menu" style="width: 0px;">
       <ul>
-        <li><a href="#">Reservation</a></li>
+        <li><a href="./reservation.html">Reservation</a></li>
         <li>
           <a href="#"><i class="fas fa-minus-square"></i>Tours</a>
           <ul class="side-menu__submenu side-menu__submenu--active">
@@ -65,7 +65,7 @@
           </div>
   
           <div class="header__link">
-            <a href="?#" class="btn btn--yellow">Reservation</a></i>
+            <a href="./reservation.html" class="btn btn--yellow">Reservation</a></i>
           </div>
         </div>
   
@@ -332,13 +332,11 @@
     </section>
     <!-- End footer -->
 
-
+    <script src="./js/shared.js"></script>
     <script>
     ///////////////////////////////////////////
     /////////////Xử lý side-menu//////////////////
     ///////////////////////////////////////////
-    // document.querySelector(".banner").style.marginTop = document.querySelector("header.header").clientHeight - 1 + "px";
-  
     document.querySelector(".header__menu-icon").addEventListener("click", function() {
   
       if(document.querySelector(".side-menu").style.width === '0px') {
@@ -376,7 +374,6 @@
         }
       })
     })
-    
     </script>
 </body>
 </html>
