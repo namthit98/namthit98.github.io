@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="favicon.png" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" /> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"> 
   <link rel="stylesheet" href="./style/style.min.css">
@@ -12,23 +13,30 @@
 <body id="tour">
     <!-- Start side-menu -->
     <aside class="side-menu" style="width: 0px;">
-      <ul>
-        <li><a href="./reservation.html">Reservation</a></li>
-        <li>
-          <a href="#"><i class="fas fa-minus-square"></i>Tours</a>
-          <ul class="side-menu__submenu side-menu__submenu--active">
-            <li><a href="./tour.html">Nha Trang</a></li>
-            <li><a href="#">Phú Quốc</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#"><i class="fas fa-minus-square"></i>About us</a>
-          <ul class="side-menu__submenu side-menu__submenu--active">
-            <li><a href="#">Location</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </li>
-      </ul>
+        <ul>
+          <li>
+            <a href="#"><i class="fas fa-plus-square"></i>Home</a>
+            <ul class="side-menu__submenu">
+              <li><a href="#">Location</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </li>
+          <li><a href="./reservation.html">Reservation</a></li>
+          <li>
+            <a href="#"><i class="fas fa-minus-square"></i>Tours</a>
+            <ul class="side-menu__submenu side-menu__submenu--active">
+              <li><a href="./tour.html">Nha Trang</a></li>
+              <li><a href="#">Phú Quốc</a></li>
+            </ul>
+          </li>
+          <li>
+              <a href="#"><i class="fas fa-plus-square"></i>Languages</a>
+              <ul class="side-menu__submenu">
+                <li><img src="./images/english.png" style="width: 30px; margin-right: .5rem;" alt="" /><a href="#" style="width: 85%;" onclick="return false;">English</a></li>
+                <li><img src="./images/vietnamese.png" style="width: 30px; margin-right: .5rem;" alt="" /><a href="#" style="width: 85%;">Vietnamese</a></li>
+              </ul>
+          </li>
+        </ul>
     </aside>
     <!-- End side-menu -->
   
@@ -283,52 +291,52 @@
 
     <!-- Start footer -->
     <section class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h3 class="footer__heading">Bạn muốn được thông báo giá đặc biệt ? Đăng ký nhận bản tin của chúng tôi! </h3>
+        <div class="container" style="max-width: 1300px;">
+          <div class="row">
+            <div class="col-md-6">
+              <h3 class="footer__heading">Bạn muốn được thông báo giá đặc biệt ? Đăng ký nhận bản tin của chúng tôi! </h3>
+            </div>
+    
+            <div class="col-md-6 d-flex align-items-center">
+              <input type="email" class="footer__input" placeholder="Xin mời nhập email của bạn" />
+              <button class="footer__btn">Đăng ký</button>
+            </div>
           </div>
-  
-          <div class="col-md-6 d-flex align-items-center">
-            <input type="email" class="footer__input" placeholder="Xin mời nhập email của bạn" />
-            <button class="footer__btn">Đăng ký</button>
-          </div>
-        </div>
-  
-        <br />
-        <hr color="#373737"/>
-  
-        <div class="row mt-5">
-          <div class="col-md-4">
-            <h3 class="footer__heading">Thông tin liên lạc</h3>
-            <p class="footer__phone">Phone: +841684022929</p>
-            <p class="footer__email">Email: tohainam98@gmail.com</p>
-          </div>
-  
-          <div class="col-md-4">
-            <h3 class="footer__heading">Thông tin khác</h3>
-            <ul>
-              <li><a href="">About Us</a></li>
-              <li><a href="">Location & Map</a></li>
-              <li><a href="">Gallery</a></li>
-              <li><a href="">Contact Us</a></li>
-            </ul>
-          </div>
-  
-          <div class="col-md-4">
-            <h3 class="footer__heading">Theo dõi chúng tôi trên</h3>
-            <div class="footer__socials"> 
-              <a href="#"><i class="fab fa-facebook"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>            
+    
+          <br />
+          <hr color="#373737"/>
+    
+          <div class="row mt-5">
+            <div class="col-md-4">
+              <h3 class="footer__heading">Thông tin liên lạc</h3>
+              <p class="footer__phone">Phone: +841684022929</p>
+              <p class="footer__email">Email: tohainam98@gmail.com</p>
+            </div>
+    
+            <div class="col-md-4">
+              <h3 class="footer__heading">Thông tin khác</h3>
+              <ul>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Location & Map</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">Contact Us</a></li>
+              </ul>
+            </div>
+    
+            <div class="col-md-4">
+              <h3 class="footer__heading">Theo dõi chúng tôi trên</h3>
+              <div class="footer__socials"> 
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>            
+              </div>
             </div>
           </div>
         </div>
-      </div>
-  
-      <div class="footer__copyright mt-5">
-        <p>Copyright &copy; 2018 Hà Minh Hotel. All rights reserved</p>
-      </div>
+    
+        <div class="footer__copyright mt-5">
+          <p>Copyright &copy; 2018 Hà Minh Hotel. All rights reserved</p>
+        </div>
     </section>
     <!-- End footer -->
 
