@@ -61,7 +61,6 @@ const checkScore = function() {
 }
 
 const checkHeart = function() {
-  console.log(heart);
   if (hearts[heart]) {
     if (heart === 0) {
       hearts[heart].style.fill = "#000";
