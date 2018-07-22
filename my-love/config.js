@@ -1,0 +1,1 @@
+const sourceMp3="./images/music.mp3",dayStart=12,monthStart=5,yearStart=2015,nameUser1="T\xF4 H\u1EA3i Nam",nameUser2="Nguy\u1EC5n Kim C\xFAc",imageUser1="./images/1.jpg",imageUser2="./images/2.jpg",linkUser1="https://www.facebook.com/namsmile1304",linkUser2="https://www.facebook.com/cuc.kuki.1";
