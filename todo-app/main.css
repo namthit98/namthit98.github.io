@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #cecece;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-top: 5rem;
+}
+
+.wrapper {
+  width: 80%;
+  min-height: 50rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heading {
+  font-size: 5rem;
+  text-align: center;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  display: inline-block;
+  border-bottom: 2px solid #aaa;
+}
+
+.main {
+  margin-top: 5rem;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main__input {
+  flex: 0 0 89%;
+  margin-right: auto;
+
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #aaa;
+  padding: 1.5rem 1rem;
+  font-size: 2.5rem;
+  font-family: inherit;
+  transition: border .2s;
+}
+
+.main__input:focus {
+  border-bottom: 2px solid #DB261D;
+}
+
+.btn {
+  flex: 0 0 10%;
+
+  background-color: rgb(240, 79, 71);
+  border: none;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: background-color .2s;
+}
+
+.btn:hover {
+  background-color: #DB261D;
+}
+
+.list-todo {
+  flex: 0 0 100%;
+  margin-top: 10rem;
+
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: #a54f4f;
+  padding: 2rem 3rem;
+  font-size: 2rem;
+  color: #000;
+  cursor: pointer;
+  transition: background-color .4s;
+}
+
+.item:hover {
+  background-color: #DB261D;
+}
+
+.item--disabled {
+  background: #ccc;
+  border: 1px solid #DB261D;
+}
+
+.item--disabled:hover {
+  background-color: transparent;
+}
+
+.item--disabled .item__name {
+  text-decoration: line-through;
+}
+
+.item.item--disabled:hover .item__name {
+  color: black;
+}
+
+.item__name {
+  transition: color .4s;
+}
+
+.item:hover .item__name {
+  color: #fff;
+}
+
+.item__remove:hover {
+  color: aqua;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 1rem;
+}
