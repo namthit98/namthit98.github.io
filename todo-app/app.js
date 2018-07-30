@@ -65,15 +65,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const checkTodos = (e) => {
     if(e.target.classList.contains("item")) {
-      e.target.classList.toggle("item--disabled");
       const id = parseInt(e.target.dataset.id);
       const todoNeeded = arrayTodos.find(el => el.id === id);
       todoNeeded.isCompleted = !todoNeeded.isCompleted;
       storage.saveToStorage();
       showTodos();
     } else if (e.target.classList.contains("item__remove")) {
-      e.target.parentElement.remove();
-      const id = parseInt(e.target.dataset.id);
+      const id = parseInt(e.target.parentElement.dataset.id);
       const todoNeeded = arrayTodos.findIndex(el => el.id === id);
       arrayTodos.splice(todoNeeded, 1);
       storage.saveToStorage();
