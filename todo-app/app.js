@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   const addNewTodos = () => {
-    const id = arrayTodos.length + 1;
+    const id = arrayTodos.length === 0 ? 0 : arrayTodos[arrayTodos.length - 1].id + 1;
     const name = inputTodo.value;
     const todo = new Todos(id, name);
     arrayTodos.push(todo);
@@ -74,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const id = parseInt(e.target.parentElement.dataset.id);
       const todoNeeded = arrayTodos.findIndex(el => el.id === id);
       arrayTodos.splice(todoNeeded, 1);
+      console.log(arrayTodos);
       storage.saveToStorage();
       showTodos();
     }
