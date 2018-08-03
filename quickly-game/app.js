@@ -130,6 +130,11 @@ const createCircle = function() {
     this.remove();
   })
 
+  circle.addEventListener("animationend", function() {
+    heart--;
+    this.remove();
+  })
+
   document.querySelector(".game").appendChild(circle);
 }
 
