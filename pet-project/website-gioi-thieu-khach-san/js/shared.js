@@ -1,1 +1,0 @@
-document.querySelectorAll(".side-menu__submenu").forEach(function(a){a.parentElement.addEventListener("click",function(){a.classList.toggle("side-menu__submenu--active");let b=a.previousElementSibling.firstElementChild;b.className=b.classList.contains("fa-plus-square")?"fas fa-minus-square":"fas fa-plus-square"})});
